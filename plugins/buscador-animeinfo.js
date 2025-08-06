@@ -38,8 +38,8 @@ const AnimeInfo = ` ${mid.smsYT1}
  ${mid.smsYT4}
 ❣ ${result.url}`;
 conn.sendButton(m.chat, AnimeInfo, null, result.images.jpg.image_url, [
-['قائمة البحث | Searches 🔎', '.قسم-البحث'],
-['القائمة الكاملة | Full Menu ✨', '.أوامر'],
+['قائمة البحث | Searches 🔎', '#buscarmenu'],
+['القائمة الكاملة | Full Menu ✨', '.allmenu'],
 ['العودة إلى القائمة | Back to Menu ☘️', '/menu']], null, [['Instagram', ig]], m)
 //conn.sendFile(m.chat, result.images.jpg.image_url, 'error.jpg', AnimeInfo, fkontak, false, { contextInfo: {externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: ' 😻 Super GataBot-MD - WhatsApp ', previewType: 0, thumbnail: gataImg, sourceUrl: accountsgb }}})
 //conn.sendFile(m.chat, result.images.jpg.image_url, 'error.jpg', AnimeInfo, fkontak);
