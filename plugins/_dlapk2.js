@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 
-    if (!args[0]) throw `Ingresa el nombre de la aplicación que quieres descargar. *Ejemplo:*\n${usedPrefix + command} Clash Royale`;
+    if (!args[0]) throw `*🚫 رسالة:* يُرجى إدخال اسم التطبيق الذي تريد تنزيله.\n*مثال:*\n${usedPrefix + command} Clash Royale`;
 
     let res = await fetch(`https://api.dorratz.com/v2/apk-dl?text=${args[0]}`);
     let result = await res.json();
@@ -9,12 +9,12 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
     let packe = result.package;
 
     let texto = `${rg}
-   *Nombre* : ⇢ ${name} 📛
-   *Tamaño* : ⇢ ${size} ⚖️
-   *Package* : ⇢ ${packe} 📦
-   *Actualizado* : ⇢ ${lastUpdate} 🗓️
+   *📛 الاسم:* ⇢ ${name}
+   *⚖️ الحجم:* ⇢ ${size}
+   *📦 الحزمة:* ⇢ ${packe}
+   *🗓️ آخر تحديث:* ⇢ ${lastUpdate}
     
-Su aplicación se enviará en un momento...`;
+*⏳ جاري إرسال التطبيق...*`;
 
     await conn.sendFile(m.chat, icon, name + '.jpg', texto, m);
 
